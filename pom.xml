@@ -11,6 +11,11 @@
     <packaging>war</packaging>
 
     <name>Simple Web App</name>
+    
+    <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+	</properties>
 
     <dependencies>
         <dependency>
@@ -21,8 +26,16 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <finalName>simple-app</finalName>
-    </build>
+	<build>
+    <finalName>simple-app</finalName>
+
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
